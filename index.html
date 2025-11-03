@@ -130,6 +130,41 @@
             color: #555;
         }
 
+        .transparency {
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f4ff;
+            border-radius: 10px;
+            border: 1px solid #d0dcf7;
+            line-height: 1.7;
+        }
+
+        .transparency-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .transparency-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            transition: background 0.2s, color 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .transparency-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+
         .modal-overlay {
             display: none;
             position: fixed;
@@ -302,6 +337,14 @@
             <a href="https://buymeacoffee.com/harry18" class="btn btn-secondary" target="_blank" rel="noopener">
                 ☕ Buy Me a Coffee
             </a>
+        </div>
+
+        <div class="transparency">
+            Full source code available for security audits and transparency. All releases include SHA-256 checksums for download verification. Build from source to confirm app matches published code.
+            <div class="transparency-links">
+                <a href="https://github.com/harrykeen18/localscribe" target="_blank" rel="noopener">View Source Code</a>
+                <a href="https://github.com/harrykeen18/localscribe/releases" target="_blank" rel="noopener">Verify Downloads</a>
+            </div>
         </div>
 
         <div class="requirements">
