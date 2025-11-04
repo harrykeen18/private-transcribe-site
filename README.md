@@ -1,78 +1,65 @@
-# Private Transcribe Marketing Site
+# LocalScribe Landing Page
 
-Simple, single-page marketing website for Private Transcribe.
+Landing page for **LocalScribe** - a privacy-first macOS app for meeting transcription and summarization.
 
-## Deployment Options
+## About LocalScribe
 
-### Option 1: GitHub Pages (Recommended - Simplest)
+LocalScribe is a macOS application that provides completely private, on-device meeting transcription and summarization. It processes everything locally using:
+- **Whisper** (bundled) for speech-to-text transcription
+- **Apple Intelligence** for meeting summaries
 
-1. Create a new GitHub repository (or use existing one)
-2. Push this folder to the repository
-3. Go to repository Settings → Pages
-4. Under "Source", select "Deploy from a branch"
-5. Select branch: `main` and folder: `/ (root)`
-6. Click Save
-7. Your site will be live at `https://yourusername.github.io/repo-name/`
+### Key Features
+- 🔒 **100% Private** - Zero network requests, all processing happens on-device
+- 🚀 **Universal** - Works with any video conferencing app (Zoom, Meet, Teams, etc.)
+- 🔐 **Encrypted Storage** - AES-256 encryption for all stored transcripts
+- 🤓 **Smart Summaries** - Powered by Apple Intelligence
 
-### Option 2: Firebase Hosting
+### Requirements
+- macOS 15.0 (Sequoia) or later
+- Apple Silicon (M1/M2/M3/M4)
+- Apple Intelligence enabled
 
-1. Install Firebase CLI: `npm install -g firebase-tools`
-2. Login: `firebase login`
-3. Initialize: `firebase init hosting`
-   - Select your project or create new one
-   - Set public directory to `.` (current directory)
-   - Configure as single-page app: No
-   - Don't overwrite index.html
-4. Deploy: `firebase deploy --only hosting`
+### Current Status
+LocalScribe is currently in **beta**. The app is not yet notarized by Apple, so users need to manually approve it in System Settings → Privacy & Security after first launch.
 
-## Configuration Required
+## Repository Contents
 
-Before going live, update these placeholders in `index.html`:
-
-1. **Download link** (line 173):
-   - Replace `YOUR_USERNAME` with your GitHub username
-   - Update the DMG filename if different
-   - Or use a direct link to your latest release
-
-2. **Buy Me a Coffee link** (line 176):
-   - Replace `YOUR_USERNAME` with your Buy Me a Coffee username
-   - Create account at https://buymeacoffee.com if needed
-
-3. **Plausible Analytics** (line 160):
-   - Replace `yourdomain.com` with your actual domain
-   - Or sign up at https://plausible.io to get your domain
-   - Free tier available for small sites
-
-## Optional: Custom Domain
-
-### For GitHub Pages:
-1. Add a `CNAME` file with your domain name
-2. Configure DNS with your domain provider:
-   - Add CNAME record pointing to `yourusername.github.io`
-3. Enable "Enforce HTTPS" in GitHub Pages settings
-
-### For Firebase:
-1. Run: `firebase hosting:channel:deploy live --only hosting`
-2. Add custom domain in Firebase Console → Hosting
+This repository contains a single-page HTML landing page with:
+- Feature showcase
+- Download button (links to GitHub releases)
+- Beta warning modal with installation instructions
+- Buy Me a Coffee support link
+- Transparency section with links to source code and release verification
 
 ## File Structure
 
 ```
 .
-├── index.html          # Main (and only) page
-└── README.md          # This file
+├── index.html     # Landing page (self-contained HTML/CSS/JS)
+├── logo.png       # LocalScribe logo
+├── favicon.ico    # Site favicon
+└── README.md      # This file
 ```
 
-## Testing Locally
+## Local Development
 
-Simply open `index.html` in a browser. No build process required!
+No build process required - just open `index.html` in a browser to preview changes.
 
-## Analytics
+## Deployment
 
-The site includes Plausible Analytics (privacy-friendly, no cookies):
-- Lightweight script (~1KB)
-- GDPR compliant
-- No personal data collected
-- Real-time dashboard at plausible.io
+Currently deployed via GitHub Pages. Any commits to the main branch are automatically deployed.
 
-If you prefer no analytics at all, remove line 160 from `index.html`.
+### Updating the Download Link
+
+When releasing a new version, update the download URL in `index.html`:
+- Line 334: Main download button
+- Line 368: Fallback link in beta modal
+- Line 376: JavaScript download URL constant
+
+Example: `LocalScribe-v0.2.2-beta.zip` → `LocalScribe-v0.3.0-beta.zip`
+
+## Related Links
+
+- **Main Repository**: [github.com/harrykeen18/localscribe](https://github.com/harrykeen18/localscribe)
+- **Latest Release**: [github.com/harrykeen18/localscribe/releases/latest](https://github.com/harrykeen18/localscribe/releases/latest)
+- **Support**: [buymeacoffee.com/harry18](https://buymeacoffee.com/harry18)
